@@ -72,7 +72,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.cdf;
+})();
 })();
 </script>
 ```
@@ -169,6 +171,7 @@ y = mycdf( 11.0 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var i;
 var r;
@@ -184,6 +187,7 @@ for ( i = 0; i < 10; i++ ) {
     console.log( 'x: %d, r: %d, p: %d, F(x;r,p): %d', x.toFixed( 4 ), r.toFixed( 4 ), p.toFixed( 4 ), y.toFixed( 4 ) );
 }
 
+})();
 })();
 </script>
 </body>
