@@ -65,13 +65,13 @@ where `r` is the number of successes until experiment is stopped, `p` is the suc
 ## Usage
 
 ```javascript
-import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@esm/index.mjs';
+import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@v0.1.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@v0.1.0-esm/index.mjs';
 ```
 
 #### cdf( x, r, p )
@@ -165,7 +165,7 @@ y = mycdf( 11.0 );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@esm/index.mjs';
+import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-negative-binomial-cdf@v0.1.0-esm/index.mjs';
 
 var i;
 var r;
