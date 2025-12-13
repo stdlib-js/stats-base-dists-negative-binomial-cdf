@@ -171,22 +171,18 @@ y = mycdf( 11.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var randu = require( '@stdlib/random-base-randu' );
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
 var cdf = require( '@stdlib/stats-base-dists-negative-binomial-cdf' );
 
-var i;
-var r;
-var p;
-var x;
-var y;
+var opts = {
+    'dtype': 'float64'
+};
+var x = uniform( 10, 0.0, 50.0, opts );
+var r = uniform( 10, 0.0, 50.0, opts );
+var p = uniform( 10, 0.0, 1.0, opts );
 
-for ( i = 0; i < 10; i++ ) {
-    x = randu() * 50;
-    r = randu() * 50;
-    p = randu();
-    y = cdf( x, r, p );
-    console.log( 'x: %d, r: %d, p: %d, F(x;r,p): %d', x.toFixed( 4 ), r.toFixed( 4 ), p.toFixed( 4 ), y.toFixed( 4 ) );
-}
+logEachMap( 'x: %0.4f, r: %0.4f, p: %0.4f, F(x;r,p): %0.4f', x, r, p, cdf );
 ```
 
 </section>
@@ -219,6 +215,11 @@ For more information on the project, filing bug reports and feature requests, an
 [![Chat][chat-image]][chat-url]
 
 ---
+
+## License
+
+See [LICENSE][stdlib-license].
+
 
 ## Copyright
 
@@ -265,6 +266,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-cdf/tree/esm
 [esm-readme]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-cdf/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/stats-base-dists-negative-binomial-cdf/blob/main/branches.md
+
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-dists-negative-binomial-cdf/main/LICENSE
 
 [cdf]: https://en.wikipedia.org/wiki/Cumulative_distribution_function
 
